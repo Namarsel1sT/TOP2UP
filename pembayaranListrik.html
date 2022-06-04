@@ -1,0 +1,693 @@
+<html lang="en">
+    <!doctype html> 
+    <html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+    
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="Style/stylePembayaranListrik.css">
+       
+        
+        <title>Tagihan Listrik - TOP2UP</title>
+        
+        
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover"> 
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable " content="yes ">
+        <meta name="apple-mobile-web-app-status-bar-style " content="black ">
+        <meta name="msapplication-TileColor " content="#f76b1d ">
+        <meta name="theme-color " content="#f76b1d">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="https://cdn1.codashop.com/S/content/common/css/jquery-ui-1.12.1.css">
+        <link rel="stylesheet" type="text/css" media="all" href="https://cdn1.codashop.com/S/content/common/css/flags.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans&amp;display=swap" rel="stylesheet"> 
+            
+                <link rel="stylesheet" type="text/css" media="all" href="/content/mobile/css/productPage/responsive-product-page.css">
+           
+                <meta name="description" content="Bayar Tagihan Listik sekarang lebih mudah dengan menggunakan GoPay, Dana, OVO, Telkomsel, Indosat, Tri, XL, Bank Transfer, Indomaret, Alfamart dan Kredivo!">
+            
+            <link rel="stylesheet" href="https://cdn1.codapayments.com/W/pub/mobile-web/css/material-components-web.min.css">
+            <script src="https://cdn1.codapayments.com/W/pub/mobile-web/js/material-components-web.min.js"></script>
+            
+                <script>
+                    function airtime_checkout(e){create_airtime_form_div(e);try{jQuery("#airtime_form").overlay({top:200,left:"center",closeOnClick:!1,load:!0,mask:{color:"#fff",loadSpeed:"fast",opacity:.5},onClose:function(){jQuery.ajax({url:"https://midas.codapayments.com/airtime/cancel",data:{TxnId:e},complete:function(e,t){close_airtime_window()},timeout:2e3,dataType:"text"})}})}catch(t){$("#airtime_form").prepend("<a class='close close_js' style='z-index:1000'></a>"),$(".close_js").on("click",function(){merchant_land_url=window.location,jQuery.ajax({url:"https://midas.codapayments.com/airtime/cancel",data:{TxnId:e},complete:function(e,t){close_airtime_window()},timeout:2e3,dataType:"text"})})}top_posi=(jQuery(window).height()-440)/2,top_posi>0&&jQuery("#airtime_form").css({"top":"50%", left: "50%", "margin-top": "-220px","margin-left": "-335px"})}
+                </script>
+        
+           
+        <script src="https://cdn.onesignal.com/sdks/OneSignalPageSDKES6.js?v=150710" async=""></script><link rel="stylesheet" href="https://onesignal.com/sdks/OneSignalSDKStyles.css?v=1"></head>
+        
+        <body>
+            <input type="hidden" id="seller-name" value="Mobile Legends">
+            <input type="hidden" id="group-id" value="19">
+        
+            <div id="product-page__container">
+
+        <div class="container product-container">
+        
+            <section class="product-details-container">
+                <div class="product-top-banner__container"><img src="img/gambarr/gambar/listrik.jpeg" alt="" class="product__top-banner"></div>    
+                <div class="product__name">Tagihan Listrik</div>
+            </section>
+                    <main id="contents" class="main-content">
+                        <!-- contents.s -->
+        
+                        <input type="hidden" id="pricePointId" name="pricePointId" value="">
+        <div class="section select-server">
+            <h2 class="circle">
+                <span>1</span>
+                No. Meter/ID Pelanggan
+            </h2>
+            <div class="form-group-container form-user-identities">
+        
+                 <div class="form-field-wrapper form__field-user-id">
+                    <input name="moonton.userId" type="tel" class="userid form-input" placeholder="No. Meter/ID Pelanggan" maxlength="10">
+                 </div>
+        
+                 
+        
+                 <div class="form__image-helper-container">
+                    <span class="ico-question desktop-trigger">?</span>
+                    <span class="ico-question mobile-trigger">?</span>
+                 </div>
+        
+                <div class="img-helper">
+                    <div id="img-helper-element"></div>
+                    <span class="img-helper__close-btn"> ✕ </span>
+                </div>
+        
+                 <div class="img-helper__background"></div>
+                 <p class="form__field-instruction-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam neque nemo quisquam minus totam dolores nam consequatur rerum eaque illo?</p>
+                 
+            </div>
+        </div>
+        <script type="text/javascript" src="https://cdn1.codashop.com/S/content/common/js/jquery.mask.min.js"></script>
+        <script type="text/javascript" src="/content/mobile/js/moonton.js"></script>
+        <script type="text/javascript" src="/content/common/js/third_party_common.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $( "#confirm-user-dialog" ).dialog({
+                    resizable: false,
+                    height: "auto",
+                    dialogClass: "no-titlebar",
+                    autoOpen: false,
+                    modal: true,
+                    dialogClass: "confirm-user-dialog__container",
+                    buttons: [
+                        {
+                            text: 'Batalkan',
+                            class: "confirm-user-dialog__btn btn-cancel",
+                            click: function() {
+                                CODA.Shop.txnId = null;
+                                $('.confirm-user-dialog__container').hide();
+                                $("#overlay").hide();
+                            }
+                        },
+                        {
+                            text: 'Konfirm',
+                            class: "confirm-user-dialog__btn btn-blue",
+                            click: function() {
+                                $('.confirm-user-dialog__container').hide();
+                                $("#overlay").hide();
+                                openTxnWindow();
+                            }
+                        }
+                    ],
+                    create: function (event, ui) {
+                        $(".ui-widget-header").hide();
+                        $(this).closest(".ui-dialog").css("padding-top", "15px");
+                    }
+                });
+            });
+        
+            function showConfirmation(data, extraMsg) {
+                var ul = $("#confirm-user-dialog > ul");
+        
+                ul = $(ul);
+        
+                $("#confirm-user-dialog > ul > li").not('li:first, li:nth-child(2)').remove();
+        
+                var li = $();
+                var nickname = "";
+                try {
+                    nickname = JSON.parse(decodeURIComponent(data.result)).username;
+                } catch(e) {
+                    nickname = decodeURIComponent(data.result);
+                }
+                filterXSS(nickname);
+                li = li.add("<li class='confirm-user-dialog__extra-msg'>" + extraMsg + "</li>");
+                li = li.add("<li><div>" + 'Nama panggilan: ' + "</div><div>" + nickname + "</div></li>");
+                li = li.add("<li><div>" + 'ID: ' + "</div><div style='direction:ltr'>" + data.user.userId + "(" + data.user.zoneId + ")" +"</div></li>");
+                li = li.add("<li><div>" + 'Harga: ' + "</div><div>" + data.channelPrice + "</div></li>");
+                li = li.add("<li><div>" + 'Bayar dengan: ' + "</div><div>" + data.paymentChannel + "</div></li>");
+        
+                li.appendTo(ul);
+                ul.appendTo("#confirm-user-dialog");
+        
+                $("#overlay").fadeIn( function(){
+                    $(".confirm-user-dialog__container").show();
+                });
+            }
+        
+        </script>
+        <div class="section voucher">
+            <h2 class="circle">
+                    <span>2</span>
+                
+                    Pilih Nominal Top Up
+                
+            </h2>
+            <ul class="vocherSelectionList ul-denoms voucher-denom-container">         
+                                <li id="denomination_1543" class="voucher-list-element">
+                                    <button onclick="cost(id)" type="button" id="1" style="border: none; border-radius: 25px; padding: 35px; margin-left:50px">
+                                        
+                                            <span class="element-check-label"> L </span>
+                                        
+                                        <b>50.000</b>
+                                    </button>
+                                </li>
+                                <li id="denomination_250" class="voucher-list-element">
+                                    <button onclick="cost(id)" type="button" id="2" style="border: none; border-radius: 25px; padding: 35px; margin-left:50px">
+                                        
+                                        <span class="element-check-label"> L </span>
+                                    
+                                    <b>100.000</b>
+                                </button>
+                                </li>
+                                
+                                <li id="denomination_251" class="voucher-list-element">
+                                   <button onclick="cost(id)" type="button" id="3" style="border: none; border-radius: 25px; padding: 35px; margin-left:50px">
+                                        
+                                            <span class="element-check-label"> L </span>
+                                        
+                                            <b>150.000</b>
+                                    </button>
+                                </li>
+                                <li id="denomination_252" class="voucher-list-element">
+                                    <button onclick="cost(id)" type="button" id="4" style="border: none; border-radius: 25px; padding: 35px; margin-left:50px">
+                                        
+                                        <span class="element-check-label"> L </span>
+                                    
+                                        <b>200.000</b>
+                                </button>
+                                </li>
+                                <li id="denomination_191" class="voucher-list-element">
+                                    <button onclick="cost(id)" type="button" id="5" style="border: none; border-radius: 25px; padding: 35px; margin-left:50px">
+                                        
+                                        <span class="element-check-label"> L </span>
+                                    
+                                        <b>250.000</b>
+                                </button>
+                                </li>
+                                <li id="denomination_208" class="voucher-list-element">
+                                    <button onclick="cost(id)" type="button" id="6" style="border: none; border-radius: 25px; padding: 35px; margin-left:50px">
+                                        
+                                        <span class="element-check-label"> L </span>
+                                    
+                                        <b>300.000</b>
+                                </button>
+                                </li>
+            </ul>
+            <br>
+            <br>
+            <!-- script harga -->
+            <script>
+                var kurang = document.getElementById("kurang");
+                var tambah = document.getElementById("tambah");
+                var harga = 0;
+                var ct =  0;
+                var price = document.getElementById("price");
+                var tertulis = document.getElementById("diskon");
+                 function cost (id)
+                 {
+                        if(id=="1")
+                            {
+                                ct=1;
+                                harga+=15000;
+                                price.innerHTML=harga;
+                                // document.getElementById("diskon").value=harga
+
+                            }
+                        if(id=="2")
+                            {
+                                ct=2;
+                                harga+=35000;
+                                price.innerHTML=harga;
+                                // tertulis.value=harga;
+                            }
+                        if(id=="3")
+                            {
+                                ct=3;
+                                harga+=54000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                        if(id=="4")
+                            {
+                                ct=4;
+                                harga+=876000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                        if(id=="5")
+                            {
+                                ct=5;
+                                harga+=2350000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                         if(id=="6")
+                            {
+                                ct=6;
+                                harga+=2870000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                 }
+
+                 function tambahi()
+                 {
+                    if(tambah.click)
+                    {
+                        if(ct=="1")
+                            {
+                               
+                                harga+=15000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+
+                            }
+                        if(ct=="2")
+                            {
+                                
+                                harga+=35000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                        if(ct=="3")
+                            {
+                               
+                                harga+=54000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                        if(ct=="4")
+                            {
+                               
+                                harga+=876000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                        if(ct=="5")
+                            {
+                                
+                                harga+=2350000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                         if(ct=="6")
+                            {
+                               
+                                harga+=2870000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                    }
+                 }
+
+                 function kurangi()
+                 {
+                    if(kurang.click)
+                    {
+                        if(harga>0)
+                        {   
+                            if(ct=="1")
+                            {
+                                
+                                harga-=15000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                        if(ct=="2")
+                            {
+                                
+                                harga-=35000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                        if(ct=="3")
+                            {
+                                
+                                harga-=54000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                        if(ct=="4")
+                            {
+                                
+                                harga-=876000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                        if(ct=="5")
+                            {
+                               
+                                harga-=2350000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                         if(ct=="6")
+                            {
+                                
+                                harga-=2870000;
+                                price.innerHTML=harga;
+                                // tertulis.value(price);
+                            }
+                        }
+                    }
+                 }
+
+            </script>
+
+        </div>
+        
+        <script type="text/javascript">
+            $('.disable-voucher').mouseover(function() {
+                tempText = $(this).html();
+                $(this).html('Tidak tersedia');
+            });
+        
+            $('.disable-voucher').mouseout(function() {
+                $(this).html(tempText);
+            });
+        </script>
+                        
+
+        <div class="section payment">
+            <h2 class="circle">
+                
+                    <span>3</span>
+                
+                Pilih pembayaran
+            </h2>
+            <ul class="ul-paymentChannels">
+                
+                    
+        
+                        <li id="paymentChannel_227" class="payment-channel-element">
+                            <a class="payment-channel-link" onclick="selectPaymentChannel(227, 'GoPay', false, false, false);">
+                                <span class="element-check-label"> L </span>
+                                <figure class="payment-logo-container">
+                                    
+                                        <img class="logo" id="payment-logo_227" src="https://cdn1.codashop.com/S/content/common/images/mno/GO_PAY_CHNL_LOGO.png" alt="GO_PAY logo">
+                                    
+                                    
+                                </figure>
+        
+                                
+                                <div class="payment-price-container">
+                                    <div class="price_label" id="priceLabel_227"></div>
+                                    <div class="price pr" id="priceInfo_227"></div>
+                                </div>
+                                <div class="payment-tagline-container">
+                                    <p class="payment-tagline" id="payment-channel__tagline_227">Bayar dengan GoPay</p>
+                                </div>
+                                <div class="best-deal-label"></div>
+        
+                            </a>
+                            <input type="hidden" id="price_227" name="price_" value="0">
+                            <input type="hidden" id="price_point_id_227" name="price_point_id_" value="0">
+                        </li>
+                    
+                
+                    
+        
+                        <li id="paymentChannel_230" class="payment-channel-element">
+                            <a class="payment-channel-link" onclick="selectPaymentChannel(230, 'OVO', false, false, false);">
+                                <span class="element-check-label"> L </span>
+                                <figure class="payment-logo-container">
+                                    
+                                        <img class="logo" id="payment-logo_230" src="https://cdn1.codashop.com/S/content/common/images/mno/OVO_CHNL_LOGO.png" alt="OVO logo">
+                                    
+                                    
+                                </figure>
+        
+                                
+                                <div class="payment-price-container">
+                                    <div class="price_label" id="priceLabel_230"></div>
+                                    <div class="price pr" id="priceInfo_230"></div>
+                                </div>
+                                <div class="payment-tagline-container">
+                                    <p class="payment-tagline" id="payment-channel__tagline_230">Bayar dengan OVO</p>
+                                </div>
+                                <div class="best-deal-label"></div>
+        
+                            </a>
+                            <input type="hidden" id="price_230" name="price_" value="0">
+                            <input type="hidden" id="price_point_id_230" name="price_point_id_" value="0">
+                        </li>
+                    
+                
+                    
+        
+                        <li id="paymentChannel_220" class="payment-channel-element">
+                            <a class="payment-channel-link" onclick="selectPaymentChannel(220, 'Bank Transfer', false, false, false);">
+                                <span class="element-check-label"> L </span>
+                                <figure class="payment-logo-container">
+                                    
+                                        <img class="logo" id="payment-logo_220" src="https://cdn1.codashop.com/K/content/common/images/mno/DOKU_ATM_CHNL_LOGO.png" alt="DOKU_ATM logo">
+                                    
+                                    
+                                </figure>
+        
+                                
+                                <div class="payment-price-container">
+                                    <div class="price_label" id="priceLabel_220"></div>
+                                    <div class="price pr" id="priceInfo_220"></div>
+                                </div>
+                                <div class="payment-tagline-container">
+                                    <p class="payment-tagline" id="payment-channel__tagline_220">Bayar melalui ATM atau transfer Mobile Banking</p>
+                                </div>
+                                <div class="best-deal-label"></div>
+        
+                            </a>
+                            <input type="hidden" id="price_220" name="price_" value="0">
+                            <input type="hidden" id="price_point_id_220" name="price_point_id_" value="0">
+                        </li>
+        
+                        <li id="paymentChannel_240" class="payment-channel-element">
+                            <a class="payment-channel-link" onclick="selectPaymentChannel(240, 'Dana', false, false, false);">
+                                <span class="element-check-label"> L </span>
+                                <figure class="payment-logo-container">
+                                    
+                                        <img class="logo" id="payment-logo_240" src="https://cdn1.codashop.com/S/content/common/images/mno/DANA_CHNL_LOGO.png" alt="DANA logo">
+                                    
+                                    
+                                </figure>
+        
+                                
+                                <div class="payment-price-container">
+                                    <div class="price_label" id="priceLabel_240"></div>
+                                    <div class="price pr" id="priceInfo_240"></div>
+                                </div>
+                                <div class="payment-tagline-container">
+                                    <p class="payment-tagline" id="payment-channel__tagline_240">Bayar dengan Dana</p>
+                                </div>
+                                <div class="best-deal-label"></div>
+        
+                            </a>
+                            <input type="hidden" id="price_240" name="price_" value="0">
+                            <input type="hidden" id="price_point_id_240" name="price_point_id_" value="0">
+                        </li>
+            </ul>
+        </div>
+
+        <div class="section buy">
+            <h2 class="circle">
+                
+                <span>4</span>
+                
+                <div class="section-title">Beli!</div>
+            </h2>
+            <div class="form" id="formSection">
+                
+                    <p class="emailOptional">Optional: Jika anda ingin mendapatkan bukti pembayaran atas pembelian anda, harap mengisi alamat emailnya</p>
+                
+                    <!-- email -->
+
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                        <div id="name-div" class="mdc-text-field text-field mdc-text-field--outlined margin-width email-focused" data-mdc-auto-init="MDCTextField">
+                            
+                                <input type="text" id="email" name="name" class="mdc-text-field__input">
+                            
+                            
+                            <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label email-input-field" for="text-field-outlined" style="">
+                                        Alamat E-mail</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                    </div> <br>
+
+
+                    <!-- '' -->
+
+                    <div class="email-form-btn-group">
+                        <button onclick="myFunction()" id="mdn-submit bayar" class="btn btn-primary btn-lg" type="button">
+                            <img id="submit-loader" src="https://cdn1.codashop.com/S/content/mobile/images/spinner-25x25.gif" alt="">
+                                Beli sekarang
+                        </button>
+                        <div class="mdc-form-field">
+                            <div id="mdc-cb" class="mdc-checkbox">
+                                <input type="checkbox" class="mdc-checkbox__native-control" id="ck1">
+                                <div class="mdc-checkbox__background">
+                                    <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"> </path>
+                                    </svg>
+                                    <div class="mdc-checkbox__mixedmark"></div>
+                                </div>
+                            </div>
+                            <label for="ck1">Ingat saya</label>
+                        </div>
+                    </div>
+                    <script>
+                        function myFunction()
+                        {
+                            alert("Terima Kasih Silahkan berkunjung kembali");
+                        }
+                    </script>
+
+                </div>
+            <input type="hidden" id="id_no">
+        
+        </div>
+
+        <button onclick="myFunction()" id="mdn-submit bayar" class="btn btn-secondary btn-lg" type="button">
+            <img id="submit-loader" src="https://cdn1.codashop.com/S/content/mobile/images/spinner-25x25.gif" alt="">
+                Kembali
+        </button>
+        <script>
+            function goBack() {
+              window.history.back();
+            }
+        </script>
+        
+        <div class="popError" style="display: none;">
+            <div class="section">
+                <h2 class="errorHeader">
+                    Aduh!
+                </h2>
+                <ul class="errorMessage__container" id="errorMessage">
+                    <li class="error-msg__element">Silahkan pilih nomor voucher</li>
+                    <li class="error-msg__element"></li>
+                    <li class="error-msg__element">Silahkan isi email address yang dapat dipakai</li>
+                </ul>
+                <a href="javascript:hideErrorPopup();" class="modal-button">
+                    Kembali</a>
+            </div>
+        </div>
+            <div id="overlay" class="overlay-element"></div>
+                </main>            
+                </div>
+
+            <script type="text/javascript" src="https://cdn1.codashop.com/S/content/common/js/custom-page.js?v=199"></script>
+            <script type="text/javascript" src="/content/pages/js/productPage.js"></script>
+            <script type="text/javascript" src="/content/common/js/common-sw.js?v=199"></script>
+
+            
+                  
+        
+            <script type="text/javascript">
+        
+                function addExInfo(exUserInfo) {
+                    var isSuccess = false;
+                    if(CODA.Shop.initPaymentData.beInitSess != null) {
+                        CODA.Shop.initPaymentData["exUserInfo"] = exUserInfo;
+                        isSuccess = true;
+                    } else {
+                        CODA.Shop.initPaymentData["exUserInfo"] = exUserInfo;
+                        CODA.Shop.initPaymentData["txnId"] = CODA.Shop.txnId;
+                        $.ajax({
+                            type: "GET",
+                            async: false,
+                            url: "/addExInfo.action",
+                            data: CODA.Shop.initPaymentData,
+                            dataType: 'json',
+                            timeout: 30000,
+                            success: function (data) {
+                                try {
+                                    var response = JSON.parse(data);
+                                    if (response.result && response.success) {
+                                        window.location.href = response.result;
+                                        isSuccess = true;
+                                    } else {
+                                        if (response && response.RESULT_CODE == 0) {
+                                            var message = CODA.ResultCodes.codes[response.RESULT_CODE] ? CODA.ResultCodes.codes[response.RESULT_CODE].filter(function (val) {
+                                                return val.lang == 'in';
+                                            })[0] : ''
+                                            if (!message) {
+                                                message = CODA.ResultCodes.codes[response.RESULT_CODE] ? CODA.ResultCodes.codes[response.RESULT_CODE].filter(function (val) {
+                                                    return val.lang == 'default';
+                                                })[0] : ''
+                                            }
+                                            if (message) {
+                                                $('#errorMessage').html(message.text);
+                                                $('#errorHeader').html("");
+                                                $(".popError").show();
+                                            }
+                                            isSuccess = true;
+                                            return;
+                                        } else if (response && response.errorMsg) {
+                                            $('#errorMessage').html(response.errorMsg);
+                                            $('#errorHeader').html("");
+                                            $(".popError").show();
+                                            return;
+                                        }
+                                    }
+                                } catch (e) {
+                                }
+                            },
+                            error : function(XMLHttpRequest, textStatus) {
+                                $('#errorMessage').html('Maaf, kami tidak dapat menyelesaikan pembelian Anda');
+                                $('#errorHeader').html("");
+                                $(".popError").show();
+                            },
+                            dataType: "text"
+                        });
+                    }
+                    return isSuccess;
+                }
+            </script>
+        
+    
+            <!-- at the bottom of the page -->
+            <script type="text/javascript">
+                window.mdc.autoInit();
+            </script>
+        
+        
+        
+        
+        </div>
+        <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","916139058437464");fbq("track","PageView");</script>
+      
+        
+        
+        <link rel="manifest" href="/manifest.json">
+        <script type="text/javascript" id="" src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"></script><div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front confirm-user-dialog__container ui-dialog-buttons ui-draggable" aria-describedby="confirm-user-dialog" aria-labelledby="ui-id-1" style="display: none; padding-top: 15px;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle" style="display: none;"><span id="ui-id-1" class="ui-dialog-title">&nbsp;</span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div class="confirm-modal__container ui-dialog-content ui-widget-content" id="confirm-user-dialog" style="display: block;">
+            <ul>
+                <li class="confirm-modal__title">Detail pesanan</li>
+                <li class="confirm-modal__confirm-txt">Mohon konfirmasi nama panggilan anda sudah benar.</li>
+            </ul>
+        </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="confirm-user-dialog__btn btn-cancel ui-button ui-corner-all ui-widget">Batalkan</button><button type="button" class="confirm-user-dialog__btn btn-blue ui-button ui-corner-all ui-widget">Konfirm</button></div></div></div>
+        <script type="text/javascript" id="">var OneSignal=window.OneSignal||[];OneSignal.push(function(){OneSignal.init({appId:"be1fff86-b0fd-492f-ac41-20c2caf3ba85"})});</script>
+          <script type="text/javascript" id="">OneSignal.push(function(){OneSignal.on("subscriptionChange",function(a){console.log("The user's subscription state is now:",a);!0===a&&OneSignal.sendTags({sub_url:window.location.href,country:window.location.pathname,gvt:"19",topic:"tags"}).then(function(a){console.log("tagsSent: "+JSON.stringify(a))})})});</script><iframe src="https://onesignal.com/webPushAnalytics" style="display: none;"></iframe><div id="onesignal-bell-container" class="onesignal-bell-container onesignal-reset onesignal-bell-container-bottom-left"><div id="onesignal-bell-launcher" class="onesignal-bell-launcher onesignal-bell-launcher-sm onesignal-bell-launcher-bottom-left onesignal-bell-launcher-theme-default onesignal-bell-launcher-active" style="bottom: 15px; left: 15px;"><div class="onesignal-bell-launcher-button"><path class="foreground" d="M50.1 66.2H27.7s-2-.2-2-2.1c0-1.9 1.7-2 1.7-2s6.7-3.2 6.7-5.5S33 52.7 33 43.3s6-16.6 13.2-16.6c0 0 1-2.4 3.9-2.4 2.8 0 3.8 2.4 3.8 2.4 7.2 0 13.2 7.2 13.2 16.6s-1 11-1 13.3c0 2.3 6.7 5.5 6.7 5.5s1.7.1 1.7 2c0 1.8-2.1 2.1-2.1 2.1H50.1zm-7.2 2.3h14.5s-1 6.3-7.2 6.3-7.3-6.3-7.3-6.3z" style="fill: rgb(255, 255, 255);"></path><ellipse class="stroke" cx="49.9" cy="49.9" rx="37.4" ry="36.9" style="stroke: rgb(255, 255, 255);"></ellipse></svg></div><div class="onesignal-bell-launcher-badge" style="filter: drop-shadow(0 2px 4px rgba(34,36,38,0));; -webkit-filter: drop-shadow(0 2px 4px rgba(34,36,38,0));;"></div><div class="onesignal-bell-launcher-message"><div class="onesignal-bell-launcher-message-body"></div></div><div class="onesignal-bell-launcher-dialog" style="filter: drop-shadow(0px 2px 2px rgba(34,36,38,.15));; -webkit-filter: drop-shadow(0px 2px 2px rgba(34,36,38,.15));;"><div class="onesignal-bell-launcher-dialog-body"></div></div></div></div></body></html>
